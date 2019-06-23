@@ -1,38 +1,45 @@
-//#include<iostream>
-//#include<string>
-//#include<vector>
-//using namespace std;
-///*
-//Ë¼Â·£º10µÄ100´Î·½ÕâÃ´´óµÄÊı¿Ï¶¨²»¿ÉÄÜÓÃlong long int,È»ºóÕâĞ©ÊıµÄËùÓĞºÍ×î´óÊÇ999£¬ËùÒÔÏÈÓÃstring
-//´¢´æÕâ¸öÊı£¬È»ºó·Ö±ğÇó³öÕâĞ©Êı×ÖµÄºÍ£¬×îºóÊä³ö¡£
-//*/
-//int main(void)
-//{
-//	string str;
-//	cin >> str;
-//	int sum = 0;
-//	for (int i = 0; i < str.size(); i++)
-//	{
-//		sum += str[i] - '0';
-//	}
-//	string s = to_string(sum);//½«sum×ª»¯ÎªstringÀàĞÍµÄ±äÁ¿
-//	/*cout << s << endl;*/
-//	vector<string> v;//ÉùÃ÷Ò»¸övectorÀ´´æ·ÅstringÀàĞÍµÄËùÓĞ¿ÉÄÜÊä³ö
-//	v.push_back("zero");
-//	v.push_back("one");
-//	v.push_back("two");
-//	v.push_back("three");
-//	v.push_back("four");
-//	v.push_back("five");
-//	v.push_back("six");
-//	v.push_back("seven");
-//	v.push_back("eight");
-//	v.push_back("nine");
-//	cout << v[s[0] - '0'];
-//	for (int i = 1; i < s.size(); i++)
-//	{
-//		cout << ' '<<v[s[i] - '0'];
-//	}
-//	system("pause");
-//	return 0;
-//}
+#include<iostream>
+#include<string>
+#include<vector>
+using namespace std;
+/*
+æ€è·¯ï¼š10çš„100æ¬¡æ–¹è¿™ä¹ˆå¤§çš„æ•°è‚¯å®šä¸å¯èƒ½ç”¨long long int,ç„¶åè¿™äº›æ•°çš„æ‰€æœ‰å’Œæœ€å¤§æ˜¯999ï¼Œæ‰€ä»¥å…ˆç”¨string
+å‚¨å­˜è¿™ä¸ªæ•°ï¼Œç„¶ååˆ†åˆ«æ±‚å‡ºè¿™äº›æ•°å­—çš„å’Œï¼Œæœ€åè¾“å‡ºã€‚
+*/
+int main(void)
+{
+	string str;
+	cin >> str;
+	int sum = 0;
+	for (int i = 0; i < str.size(); i++)
+	{
+		sum += str[i] - '0';
+	}
+	string s = to_string(sum);//å°†sumè½¬åŒ–ä¸ºstringç±»å‹çš„å˜é‡
+	/*cout << s << endl;*/
+	//vector<string> v;//å£°æ˜ä¸€ä¸ªvectoræ¥å­˜æ”¾stringç±»å‹çš„æ‰€æœ‰å¯èƒ½è¾“å‡º
+	//v.push_back("zero");
+	//v.push_back("one");
+	//v.push_back("two");
+	//v.push_back("three");
+	//v.push_back("four");
+	//v.push_back("five");
+	//v.push_back("six");
+	//v.push_back("seven");
+	//v.push_back("eight");
+	//v.push_back("nine");
+	//cout << v[s[0] - '0'];
+	//for (int i = 1; i < s.size(); i++)
+	//{
+	//	cout << ' '<<v[s[i] - '0'];
+	//}
+	//æ”¹è¿›æ–¹æ³•:ç›´æ¥ä½¿ç”¨æ•°ç»„
+	string arr[10] = { "zero","one","two","three","four","five","six","seven","eight","nine" };
+	cout << arr[s[0] - '0'];
+	for (int i = 1; i < s.size(); i++)
+	{
+		cout<<' '<<arr[s[i] - '0'];
+	}
+	system("pause");
+	return 0;
+}
