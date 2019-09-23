@@ -1,5 +1,6 @@
 ///*
 //分数运算题：1081,1088
+//最重要的两个步骤：化简分数的三步（分母为负数，分子为0，其他情况）以及输出（整数，假分数，真分数）的三步
 //*/
 //#include<iostream>
 //#include<algorithm>
@@ -68,7 +69,7 @@
 //	{
 //		cout << temp.up << endl;
 //	}
-//	else if (temp.up > temp.down)//如果分子大于分母，说明是假分数，直接按格式输出即可
+//	else if (abs(temp.up) > temp.down)//如果分子大于分母，说明是假分数，直接按格式输出即可.注意这里一定是abs，不然有可能分子为负数则不会走这一步
 //	{
 //		cout << temp.up / temp.down << ' ' << abs(temp.up) % temp.down << '/' << temp.down << endl;//这里是abs是因为如果temp.up小于0，那么前面输出整数时已经将负号输出了，这样后面需要全部都是正数
 //	}
